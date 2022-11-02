@@ -1,0 +1,48 @@
+package pacote;
+
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+public class Caracteristicas {
+	
+	int pontos, pontosiniciais=15, n;
+	Scanner Scan = new Scanner(System.in);
+	ArrayList <String> caracteristicas = new ArrayList<String>();
+	
+	public void Pontos() {
+		caracteristicas.add("Força");
+		caracteristicas.add("Intelgência");
+		caracteristicas.add("Carisma");
+		caracteristicas.add("Agilidade");
+		System.out.println("As características são: " + caracteristicas);
+		System.out.println("Você tem 15 pontos");
+
+		Switch();
+		
+	}
+	public void Switch() {
+		System.out.println("Escolha quantos pontos deseja colocar em cada uma delas");
+		n=1;
+		switch (n) {
+		  case 1:
+		    System.out.println("Força");
+		    pontos = Scan.nextInt();
+		    pontosiniciais-=pontos;
+		    System.out.println(pontosiniciais);
+		    break;
+		  case 2:
+		    System.out.println("Intelgência");
+		    break;
+		  case 3:
+		    System.out.println("Carisma");
+		    break;
+		  case 4:
+		    System.out.println("Agilidade");
+		    break;
+		    default:
+				System.out.println("Você digitou um número fora dos falados");
+				Pontos();
+		}
+	}
+}
