@@ -40,12 +40,7 @@ public class Caracteristicas {
 		    	n=2;
 			    pontosiniciais -=pontos;
 			    Forca += pontos;
-			    if(pontosiniciais==0) {
-			    	System.out.println("Você zerou seus pontos de característica");
-			    	CaracteristicasFinais();
-			    }else {
-			    	Switch();
-			    }
+		    	Switch();
 		    }
 		    break;
 		  case 2:
@@ -58,12 +53,7 @@ public class Caracteristicas {
 		    	n=3;
 			    pontosiniciais -=pontos;
 			    Inteligencia += pontos;
-			    if(pontosiniciais==0) {
-			    	System.out.println("Você zerou seus pontos de característica");
-			    	CaracteristicasFinais();
-			    }else {
-			    	Switch();
-			    }
+		    	Switch();
 		    }
 		    break;
 		  case 3:
@@ -75,13 +65,8 @@ public class Caracteristicas {
 		    }else {
 		    	n=4;
 			    pontosiniciais -=pontos;
-			    Carisma += pontos;
-			    if(pontosiniciais==0) {
-			    	System.out.println("Você zerou seus pontos de característica");
-			    	CaracteristicasFinais();
-			    }else {
-			    	Switch();
-			    }
+			    Carisma -= pontos;
+		    	Switch();
 		    }
 		    break;
 		  case 4:
@@ -92,13 +77,8 @@ public class Caracteristicas {
 		    	Switch();
 		    }else {
 			    pontosiniciais -=pontos;
-			    Agilidade += pontos;
-			    if(pontosiniciais==0) {
-			    	System.out.println("Você zerou seus pontos de característica");
-			    	CaracteristicasFinais();
-			    }else {
-				    CaracteristicasFinais();
-			    }
+			    Agilidade -= pontos;
+			    CaracteristicasFinais();
 		    }
 		    break;
 		    default:
@@ -107,18 +87,11 @@ public class Caracteristicas {
 		}
 	}
 	public void CaracteristicasFinais() {
-		System.out.println("As características finais ficaram:");
+		System.out.print("As características finais ficaram:");
 		System.out.println("Força: " + Forca);
 		System.out.println("Inteligência: " + Inteligencia);
 		System.out.println("Carisma: " + Carisma);
 		System.out.println("Agilidade: " + Agilidade);
-		System.out.print("Se deseja escolher novamente seus pontos digite 1, se deseja prosseguir digite 2:");
-		int escolhacaracnovo;
-		escolhacaracnovo = Scan.nextInt();
-		if(escolhacaracnovo==1) {
-			Pontos();
-		}else {
-			CaracteristicasFinais();
-		}
+
 	}
 }

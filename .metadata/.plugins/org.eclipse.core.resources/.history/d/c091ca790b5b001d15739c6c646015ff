@@ -112,13 +112,6 @@ public class Caracteristicas {
 		System.out.println("Inteligência: " + Inteligencia);
 		System.out.println("Carisma: " + Carisma);
 		System.out.println("Agilidade: " + Agilidade);
-		System.out.print("Se deseja escolher novamente seus pontos digite 1, se deseja prosseguir digite 2:");
-		int escolhacaracnovo;
-		escolhacaracnovo = Scan.nextInt();
-		if(escolhacaracnovo==1) {
-			Pontos();
-		}else {
-			CaracteristicasFinais();
-		}
+
 	}
 }
