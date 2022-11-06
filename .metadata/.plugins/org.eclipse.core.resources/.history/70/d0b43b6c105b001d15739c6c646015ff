@@ -6,10 +6,10 @@ import java.util.ArrayList;
 
 public class Caracteristicas {
 	
-	public int Forca = 0;
-	public int Inteligencia = 0;
-	public int Carisma = 0;
-	public int Agilidade = 0;
+	int Forca = 0;
+	int Inteligencia = 0;
+	int Carisma = 0;
+	int Agilidade = 0;
 	public int pontos, pontosiniciais=15, n;
 	Scanner Scan = new Scanner(System.in);
 	ArrayList <String> caracteristicas = new ArrayList<String>();
@@ -28,10 +28,7 @@ public class Caracteristicas {
 	
 	public void Switch() {
 		System.out.println("Escolha quantos pontos deseja colocar em cada uma delas");
-		Forca = 0;
-		Inteligencia = 0;
-		Carisma = 0;
-		Agilidade = 0;
+
 		switch (n) {
 		  case 1:
 		    System.out.println("Força");
@@ -119,8 +116,9 @@ public class Caracteristicas {
 		int escolhacaracnovo;
 		escolhacaracnovo = Scan.nextInt();
 		if(escolhacaracnovo==1) {
-			
+			Pontos();
+		}else {
+			CaracteristicasFinais();
 		}
 	}
-
 }

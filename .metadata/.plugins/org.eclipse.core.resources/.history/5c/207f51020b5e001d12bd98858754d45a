@@ -32,6 +32,7 @@ public class Caracteristicas {
 		Inteligencia = 0;
 		Carisma = 0;
 		Agilidade = 0;
+		/*pontos, pontosiniciais=15, n;*/
 		switch (n) {
 		  case 1:
 		    System.out.println("Força");
