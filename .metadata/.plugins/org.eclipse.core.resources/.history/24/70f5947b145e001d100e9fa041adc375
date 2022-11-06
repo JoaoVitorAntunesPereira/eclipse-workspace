@@ -1,0 +1,123 @@
+package pacote;
+
+import java.util.Scanner;
+
+import java.util.ArrayList;
+
+public class Caracteristicas {
+	
+	Main carac = new Main();
+	Scanner Scan = new Scanner(System.in);
+	ArrayList <String> caracteristicas = new ArrayList<String>();
+	ArrayList caract = new ArrayList();
+	
+	public void Pontos() {
+		caracteristicas.add("Força");
+		caracteristicas.add("Intelgência");
+		caracteristicas.add("Carisma");
+		caracteristicas.add("Agilidade");
+		System.out.println("As características são: " + caracteristicas);
+		System.out.println("Você tem 15 pontos");
+		carac.n=1;
+		Switch();
+	}
+	
+	public void Switch() {
+		System.out.println("Escolha quantos pontos deseja colocar em cada uma delas");
+		switch (carac.n) {
+		  case 1:
+		    System.out.println("Força");
+		    carac.pontos = Scan.nextInt();
+		    if(carac.pontos>carac.pontosiniciais) {
+		    	System.out.println("Você excedeu os pontos de características");
+		    	Switch();
+		    }else {
+		    	carac.n=2;
+		    	carac.pontosiniciais -=carac.pontos;
+		    	carac.Forca += carac.pontos;
+			    if(carac.pontosiniciais==0) {
+			    	System.out.println("Você zerou seus pontos de característica");
+			    	CaracteristicasFinais();
+			    }else {
+			    	Switch();
+			    }
+		    }
+		    break;
+		  case 2:
+		    System.out.println("Intelgência");
+		    carac.pontos = Scan.nextInt();
+		    if(carac.pontos>carac.pontosiniciais) {
+		    	System.out.println("Você excedeu os pontos de características");
+		    	Switch();
+		    }else {
+		    	carac.n=3;
+		    	carac.pontosiniciais -=carac.pontos;
+		    	carac.Inteligencia += carac.pontos;
+			    if(carac.pontosiniciais==0) {
+			    	System.out.println("Você zerou seus pontos de característica");
+			    	CaracteristicasFinais();
+			    }else {
+			    	Switch();
+			    }
+		    }
+		    break;
+		  case 3:
+		    System.out.println("Carisma");
+		    carac.pontos = Scan.nextInt();
+		    if(carac.pontos>carac.pontosiniciais) {
+		    	System.out.println("Você excedeu os pontos de características");
+		    	Switch();
+		    }else {
+		    	carac.n=4;
+		    	carac.pontosiniciais -=carac.pontos;
+		    	carac.Carisma += carac.pontos;
+			    if(carac.pontosiniciais==0) {
+			    	System.out.println("Você zerou seus pontos de característica");
+			    	CaracteristicasFinais();
+			    }else {
+			    	Switch();
+			    }
+		    }
+		    break;
+		  case 4:
+		    System.out.println("Agilidade");
+		    carac.pontos = Scan.nextInt();
+		    if(carac.pontos>carac.pontosiniciais) {
+		    	System.out.println("Você excedeu os pontos de características");
+		    	Switch();
+		    }else {
+		    	carac.pontosiniciais -=carac.pontos;
+		    	carac.Agilidade += carac.pontos;
+			    if(carac.pontosiniciais==0) {
+			    	System.out.println("Você zerou seus pontos de característica");
+			    	CaracteristicasFinais();
+			    }else {
+				    CaracteristicasFinais();
+			    }
+		    }
+		    break;
+		    default:
+				System.out.println("Você digitou um número fora dos falados");
+				Pontos();
+		}
+	}
+	public void CaracteristicasFinais() {
+		System.out.println("As características finais ficaram:");
+		System.out.println("Força: " + carac.Forca);
+		System.out.println("Inteligência: " + carac.Inteligencia);
+		System.out.println("Carisma: " + carac.Carisma);
+		System.out.println("Agilidade: " + carac.Agilidade);
+		System.out.print("Se deseja escolher novamente seus pontos digite 1, se deseja prosseguir digite 2:");
+		int escolhacaracnovo;
+		escolhacaracnovo = Scan.nextInt();
+		if(escolhacaracnovo==1) {
+			carac.Forca = 0;
+			carac.Inteligencia = 0;
+			carac.Carisma = 0;
+			carac.Agilidade = 0;
+			carac.pontosiniciais=15;
+			Pontos();
+		}
+	}
+	public int Forca2 = carac.Forca;
+}

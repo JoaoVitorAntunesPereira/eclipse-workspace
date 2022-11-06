@@ -1,0 +1,103 @@
+package pacote;
+
+import java.util.Scanner;
+
+public class Inicio {
+	
+	Scanner Scan = new Scanner(System.in);
+	int escolha;
+	Caracteristicas caracteristicas = new Caracteristicas();
+	
+	public void comeco() {
+		System.out.println("                                                                                                                ");
+		System.out.println(caracteristicas.getForca());
+		System.out.println("Você acorda para ir para a escola, assim como qualquer outro dia. Você veste suas roupas, seus tênis, pega sua mochila e vai");
+		System.out.println("No meio do caminho você olha para a paisagem da cidade, vê fumaça em alguns locais, não dá bola para isso.");
+		System.out.println("Andando na rua um homem vem em sua direção, ele é estranho, \"um mendigo\" você pensa");
+		System.out.println("1)Desviar o caminho para o outro lado da rua");
+		System.out.println("2)Continuar andando");
+		escolha = Scan.nextInt();
+		if (escolha==1) {
+			Desviar();
+		}else
+		if(escolha==2) {
+			Continuar();
+		}
+	}
+	
+	public void Desviar() {
+		System.out.println("Você atravessa para o outro lado da rua para tentar evitar uma situação desconfortável");
+		System.out.println("Ele segue você, por achar isso estranho você vira a squina para ver se ele realmente está te seguindo");
+		virar();
+	}
+	public void Continuar() {
+		System.out.println("Você segue andando, pois pensa que ele só passará por você");
+		System.out.println("Você desvia mas ele \r\n"
+				+ " continua seguindo, ele começa a andar mais rápido, você corre, ele também, você se depara com mais pessoas “bêbadas” na rua");
+		System.out.println("3)seguir correndo");
+		System.out.println("4)virar a esquina");
+		escolha = Scan.nextInt();
+		if (escolha==3) {
+			seguir();
+		}else
+		if (escolha==4) {
+			virar();
+		}
+	}
+	public void seguir() {
+		System.out.println("Ao seguir correndo você vê um carro e então corre atrás dele e grita para ele parar, mas ele parece não desacelerar e continua vindo em sua direção.");
+		if(caracteristicas.Agilidade<2) {
+			mortecarro();
+		}else {
+			carro();
+		}
+	}
+	public void mortecarro() {
+		System.out.println("Você não consegue desviar do carro e acaba morrendo atropelado por ele");
+	}
+	public void desviar() {
+		System.out.println("Você consegue desviar do carro se jogando no chão, após isso você vê um carro com a porta aberta, entra nele e tenta ligá-lo para fugir dali");
+		carro();
+	}
+	
+	public void virar() {
+		System.out.println("você vira a esquina e entra em um beco e vê a cena mais traumatizante de sua vida um grupo de três ou quatro pessoas canibalizando");
+		System.out.println("alguém que usa suas últimas forças para tentar gritar por socorro, mas que logo em seguida morre você vira para correr,");
+		System.out.println("mas dá de cara com alguém que o ataca, e tenta o morder, você luta para escapar dele.");
+		if(caracteristicas.Forca<2) {
+			morte_zumbi();
+		}else {
+			
+		}
+	}
+	public void morte_zumbi() {
+		System.out.println("Você não teve força o suficiente para lutar com ele e acabou morrendo canibalizado por ele.");
+	}
+	public void escapar() {
+		System.out.println("Você luta para escapar dele, consegue mas fica ferido pelas suas unhas, então corre");
+		System.out.println("Você vê um carro com a porta aberta, entra nele e tenta ligá-lo para fugir dali");
+		carro();
+	}
+	public void carro() {
+		System.out.println("Você consegue ligar o carro e fugir de onde você estava, mas alguns metros depois você encontra uma pessoa acenando para o carro enquanto outras pessoas correm atrás dela");
+		if(caracteristicas.Carisma>3) {
+			System.out.println("1)Passar reto e não dar carona para ela;");
+			System.out.println("2)Parar o carro e dar carona para ela;");
+			if(escolha==1) {
+				passar_reto();
+			}else
+			if(escolha==2) {
+				dar_carona();
+			}
+		}else {
+			System.out.println("1)Passar reto e não dar carona para ela;");
+		}
+	}
+	public void passar_reto() {
+		System.out.println("Ao passar reto por ela você a vê caindo no chão e sendo atacada no chão");
+	}
+	public void dar_carona() {
+		
+	}
+}
+

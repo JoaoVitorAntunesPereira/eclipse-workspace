@@ -7,8 +7,10 @@ public class Inicio {
 	Scanner Scan = new Scanner(System.in);
 	int escolha;
 	Caracteristicas caracteristicas = new Caracteristicas();
+	
 	public void comeco() {
 		System.out.println("                                                                                                                ");
+		
 		System.out.println("Você acorda para ir para a escola, assim como qualquer outro dia. Você veste suas roupas, seus tênis, pega sua mochila e vai");
 		System.out.println("No meio do caminho você olha para a paisagem da cidade, vê fumaça em alguns locais, não dá bola para isso.");
 		System.out.println("Andando na rua um homem vem em sua direção, ele é estranho, \"um mendigo\" você pensa");
@@ -78,9 +80,9 @@ public class Inicio {
 	}
 	public void carro() {
 		System.out.println("Você consegue ligar o carro e fugir de onde você estava, mas alguns metros depois você encontra uma pessoa acenando para o carro enquanto outras pessoas correm atrás dela");
-		if(caracteristicas.Carisma<3) {
-			System.out.println("1)passar reto e não dar carona para ela;");
-			System.out.println("2)parar o carro e dar carona para ela;");
+		if(caracteristicas.Carisma>3) {
+			System.out.println("1)Passar reto e não dar carona para ela;");
+			System.out.println("2)Parar o carro e dar carona para ela;");
 			if(escolha==1) {
 				passar_reto();
 			}else
@@ -88,13 +90,14 @@ public class Inicio {
 				dar_carona();
 			}
 		}else {
-			
+			System.out.println("1)Passar reto e não dar carona para ela;");
 		}
 	}
 	public void passar_reto() {
-		
+		System.out.println("Ao passar reto por ela você a vê caindo no chão e sendo atacada no chão");
 	}
 	public void dar_carona() {
 		
 	}
 }
+

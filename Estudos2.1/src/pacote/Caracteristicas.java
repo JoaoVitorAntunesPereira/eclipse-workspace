@@ -1,7 +1,7 @@
 package pacote;
 
 import java.util.Scanner;
-
+import java.util.Set;
 import java.util.ArrayList;
 
 public class Caracteristicas {
@@ -28,10 +28,6 @@ public class Caracteristicas {
 	
 	public void Switch() {
 		System.out.println("Escolha quantos pontos deseja colocar em cada uma delas");
-		Forca = 0;
-		Inteligencia = 0;
-		Carisma = 0;
-		Agilidade = 0;
 		switch (n) {
 		  case 1:
 		    System.out.println("Força");
@@ -42,7 +38,7 @@ public class Caracteristicas {
 		    }else {
 		    	n=2;
 			    pontosiniciais -=pontos;
-			    Forca += pontos;
+			    int Forca2 = Forca + pontos;
 			    if(pontosiniciais==0) {
 			    	System.out.println("Você zerou seus pontos de característica");
 			    	CaracteristicasFinais();
@@ -119,7 +115,12 @@ public class Caracteristicas {
 		int escolhacaracnovo;
 		escolhacaracnovo = Scan.nextInt();
 		if(escolhacaracnovo==1) {
-			
+			Forca = 0;
+			Inteligencia = 0;
+			Carisma = 0;
+			Agilidade = 0;
+			pontosiniciais=15;
+			Pontos();
 		}
 	}
 

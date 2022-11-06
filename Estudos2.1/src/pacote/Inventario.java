@@ -1,6 +1,5 @@
 package pacote;
 
-public class Inventario{
+public class Inventario {
 	boolean faca = false;
-	
 }
